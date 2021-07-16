@@ -1,0 +1,45 @@
+IntroToPython
+---
+refamiliarized myself with simple python/coding syntax and rules:
+loops, arithmetic, print statements, functions, tuples and lists,
+
+MovingSmile
+---
+learned some pygame syntax:
+setting game clock, loop speed, whole game is a loop
+ clock = pygame.time.Clock()
+    while True:
+        # DONE 4: Set the clock speed to 60 fps
+        clock.tick(60)
+
+drawing simple shapes
+    pygame.draw.circle(screen, (r,g,b), (x, y), radius, thickness)
+    pygame.draw.rect(screen, (r,g,b), (x, y, width, height), thickness)
+key press detection
+     if event.type == pygame.KEYDOWN:
+                pressedKeys = pygame.key.get_pressed()
+                if pressedKeys[pygame.K_UP]:
+                    eye_y_delta -= 0
+
+dogbark
+-
+images
+    image1 = pygame.image.load("2dogs.jpg")
+    image1 = pygame.transform.scale(image1, (IMAGE_SIZE, IMAGE_SIZE))
+    blit
+text
+   font1 = pygame.font.Font(None, 28)
+    font2 = pygame.font.SysFont("Impact", 50)
+   caption1 = font1.render("Two Dogs", True, BLACK)
+        bigCaption = font2.render("Funny message", True, RED)
+        blit
+sound
+if event.type == pygame.MOUSEBUTTONDOWN:
+barkSound.play()
+barkSound = pygame.mixer.Sound("bark.wav")
+pygame.mixer.music.load() background music, -1 means repeat
+
+hitbox
+ hero_hitbox = pygame.Rect(self.x,self.y,
+                                  self.image_umbrella.get_width(), self.image_umbrella.get_height())
+        return hero_hitbox.collidepoint(raindrop.x, raindrop.y)

@@ -1,0 +1,12 @@
+I have learned to control the color and motions of objects
+
+DogBark
+    Images
+            image1 = pygame.image.load("2dogs.JPG")
+            image1=pygame.transform.scale(image1, (IMAGE_SIZE, IMAGE_SIZE))
+
+Circle
+    Backgroud Music
+            Define the variable
+                drums = pygame.mixer.Sound("drums.wav")
+            drums.play(-1)

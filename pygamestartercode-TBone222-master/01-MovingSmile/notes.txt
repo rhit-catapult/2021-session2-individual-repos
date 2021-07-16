@@ -1,0 +1,4 @@
+you have to create the scenes manually in python
+majority of the features you have to import before using
+python doesnt have arrays but has []  and ()
+quotes can be " ",' ',""" """, and f" "

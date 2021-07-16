@@ -1,0 +1,85 @@
+Into To Python
+
+Variables: Can be anything you choose and can be referenced by using just the variable after you define it.
+
+(Variable) = (Variable) + number
+
+is the same thing as
+
+(Variable) += (or) -= number
+
+Loops:
+
+Tuples:
+
+Instance Variables: NOUNS
+
+Methods: VERBS
+
+Pass: will skip over the line of code so you can discover where your problem is
+or if you know there is a problem in a certain area you can remove it
+
+Getting a key to press once:
+                if event.type == pygame.KEYDOWN:
+                    pressed_keys = pygame.key.get_pressed()
+                    if pressed_keys[ex. pygame.K_UP]:
+                        # print("text here")
+                        eyedy = eyedy + 5
+
+Getting a key to press MANY:
+    same code, but put in game loop
+
+Slow down the game loop:
+    clock = pygame.time.Clock()
+        clock.tick(60)
+
+DogBark: Intro to Images, Text, Sound Effects, and Background Music
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                bark_sound.play()
+
+pygame.mixer.music.load("bark.mp3") #sound effects
+pygame.mixer.music.play(-1) #for infinite/background music
+pygame.mixer.music.stop() # to stop the music
+
+Click the Circle:
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                click_position = event.pos
+
+Raindrop:
+
+Tik Tac Toe:
+
+to break up tuple:
+    mouse_x = event.pos[0]
+        mouse_y = event.pos[1]
+        or...
+        mouse_x, mouse_y = event.pos
+
+Galiga:
+
+We used self.x and self.y but you can just choose are starting point like self.x = 320 and self. y = 540
+if you canted to hard code a starting point
+
+Timer:
+import pygame
+pygame.init()
+screen = pygame.display.set_mode((1800, 1100))
+clock = pygame.time.Clock()
+
+counter, text = 20, '20'.rjust(3)
+pygame.time.set_timer(pygame.USEREVENT, 1000)
+font = pygame.font.SysFont('Consolas', 30)
+
+run = True
+while run:
+    for e in pygame.event.get():
+        if e.type == pygame.USEREVENT:
+            counter -= 1
+            text = str(counter).rjust(3) if counter > 0 else 'boom!'
+        if e.type == pygame.QUIT:
+            run = False
+
+    screen.fill((255, 255, 255))
+    screen.blit(font.render(text, True, (0, 0, 0)), (900, 550))
+    pygame.display.flip()
+    clock.tick(60)
